@@ -23,13 +23,6 @@ class AddRefillView(generics.CreateAPIView):
     serializer_class = RefillSerializer
     permission_classes = [IsAuthenticated]
     
-    def perform_create(self, serializer):
-        user = self.request.user
-        print("Authenticated User:", user)  # Add this line to check the user
-        if user.is_authenticated:
-            serializer.save(user=user)
-        else:
-            print("User is not authenticated!")
 
 
 class ListRefillView(generics.ListAPIView):

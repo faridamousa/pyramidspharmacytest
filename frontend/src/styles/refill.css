@@ -1,0 +1,6 @@
+.refillRequests-container {
+  width: 80%; /* Adjust width percentage to make the chart smaller than the page */
+  max-width: 800px; /* Optional: set a max-width for the chart */
+  margin: 0 auto; /* Center the chart horizontally */
+  padding: 20px;
+}

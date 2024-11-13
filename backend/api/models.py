@@ -14,13 +14,12 @@ class Medicine (models.Model):
         return f"{self.name}"
 
 class RefillRequest (models.Model):
-    user = models.ForeignKey(User, on_delete = models.CASCADE)
     medicine = models.ForeignKey(Medicine, on_delete = models.CASCADE)
     quantity = models.IntegerField(default=1)
     created_at = models.DateField(auto_now_add = True)
 
 
     def __str__(self):
-        return f"refill request for {self.medicine.name} by {self.user.username} "
+        return f"refill request for {self.medicine.name} "
 
 

@@ -1,0 +1,27 @@
+.medicine-container {
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.medicine-name {
+  color: #333;
+}
+
+.medicine-description {
+  color: #666;
+}
+
+.medicine-dosage {
+  color: #666;
+}
+
+.medicine-available_quantity {
+  color: #666;
+}
+
+.medicine-date {
+  color: #999;
+  font-size: 0.8rem;
+}

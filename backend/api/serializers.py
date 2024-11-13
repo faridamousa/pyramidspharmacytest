@@ -13,7 +13,7 @@ class RefillSerializer(serializers.ModelSerializer):
     medicine = serializers.PrimaryKeyRelatedField(queryset=Medicine.objects.all())  
     class Meta:
         model = RefillRequest
-        fields = ('id','user','medicine', 'quantity','created_at')
+        fields = ('id','medicine', 'quantity','created_at')
 
 
 class RefillCountSerializer(serializers.Serializer):
