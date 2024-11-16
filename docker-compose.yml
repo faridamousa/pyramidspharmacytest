@@ -1,0 +1,43 @@
+services:
+  database:
+    image: postgres:14
+    container_name: database
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Nawy2024
+      - POSTGRES_DB=medicine
+
+    volumes:
+      - medicine-data:/var/lib/postgresql/data
+    ports:
+      - "5450:5432"
+
+  backend:
+    build: ./backend
+    container_name: backend
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Nawy2024
+      - POSTGRES_DB=medicine
+    ports:
+      - 8000:8000
+    links:
+      - database
+    depends_on:
+      - database
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - 4200:4200
+    links:
+      - backend
+    depends_on:
+      - backend
+
+volumes:
+  database:
+    driver: local
+  medicine-data:
