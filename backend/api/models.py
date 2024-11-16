@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
 
 # Create your models here.
 
@@ -12,8 +12,13 @@ class Medicine (models.Model):
 
     def __str__(self):
         return f"{self.name}"
-
+    
+class User(AbstractUser):
+	is_admin = models.BooleanField(default=False)
+	is_patient = models.BooleanField(default=False)
+     
 class RefillRequest (models.Model):
+    user = models.ForeignKey(User, on_delete = models.CASCADE)
     medicine = models.ForeignKey(Medicine, on_delete = models.CASCADE)
     quantity = models.IntegerField(default=1)
     created_at = models.DateField(auto_now_add = True)

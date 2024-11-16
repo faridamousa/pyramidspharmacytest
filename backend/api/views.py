@@ -1,10 +1,9 @@
 from django.shortcuts import render 
 from rest_framework import generics
 from .serializers import MedicineSerializer, RefillCountSerializer, RefillSerializer, UserSerializer
-from .models import Medicine, RefillRequest
+from .models import Medicine, RefillRequest, User
 from django.db.models import Count
-from rest_framework.permissions import IsAuthenticated,AllowAny
-from django.contrib.auth.models import User
+from rest_framework.permissions import IsAuthenticated, AllowAny
 # Create your views here.
 
 class AddMedicineView(generics.CreateAPIView):
@@ -31,18 +30,18 @@ class ListRefillView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
     
     
-class AddUserView(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    permission_classes = [IsAuthenticated]
+#class AddUserView(generics.CreateAPIView):
+#    queryset = User.objects.all()
+#    serializer_class = UserSerializer
+#    permission_classes = [IsAuthenticated]
 
-class ListUserView(generics.ListAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    permission_classes = [IsAuthenticated]
+#class ListUserView(generics.ListAPIView):
+#    queryset = User.objects.all()
+#    serializer_class = UserSerializer
+#   permission_classes = [IsAuthenticated]
 
     
 class CreateUserView(generics.ListCreateAPIView):
-    querySet = User.objects.all()
+    queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [AllowAny]

@@ -98,7 +98,7 @@ DATABASES = {
         'NAME': 'medicine',
         'USER': 'postgres',
         'PASSWORD': 'Nawy2024',
-        'HOST': 'database',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
@@ -147,3 +147,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWS_CREDENTIALS = True
+
+AUTH_USER_MODEL = 'api.User'
