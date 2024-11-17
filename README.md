@@ -5,41 +5,45 @@ Pyramids Pharmacy Test is a web application that allows patients to view medicin
 ## **Summary**
 This web application facilitates:
 
-- **Patients** Viewing medicines, making refill requests.
-- **Patients** Adding new medicines and analyzing refill requests.
+- **Patients:** Viewing medicines, making refill requests.
+- **Pharmacists:** Adding new medicines and analyzing refill requests.
 ---
 ## **Technologies and Frameworks Used**
 The project is built using the following technologies:
 
--**Backend**: Django and Django Rest Framework for a robust server-side architecture.
+- **Backend**: Django and Django Rest Framework for a robust server-side architecture.
 
--**Frontend**: React for a dynamic and responsive user interface.
+- **Frontend**: React for a dynamic and responsive user interface.
 
--**HTTP Communication**: Axios library for seamless communication between frontend and backend.
+- **HTTP Communication**: Axios library for seamless communication between frontend and backend.
 
--**Routing**: React Router for a smooth single-page application experience.
+- **Routing**: React Router for a smooth single-page application experience.
 
 
 ---
 ## **Features**
--**User Registration and Login**: Secure authentication for both patients and pharmacists.
+- **User Registration and Login**: Secure authentication for both patients and pharmacists.
 
--**Add New Medicines**: Pharmacists can add medicines to the system.
+- **Add New Medicines**: Pharmacists can add medicines to the system.
 
--**View Medicines**: Patients and pharmacists can browse available medicines.
+- **View Medicines**: Patients and pharmacists can browse available medicines.
 
--**Refill Requests**: Patients can request refills for medicines.
+- **Refill Requests**: Patients can request refills for medicines.
 
--**Refill Statistics**: Pharmacists can visualize refill request counts using a bar chart.
+- **Refill Statistics**: Pharmacists can visualize refill request counts using a bar chart.
 
 
 ---
 ## **Installation**
 **Prerequisites**
--**Python**
--**Django**
--**PostgreSQL**
--**Node.js and npm (for frontend)**
+- **Python**
+
+- **Django**
+
+- **PostgreSQL**
+
+- **Node.js and npm (for frontend)**
+
 
 Steps to Run the Project
 Clone the Repository
