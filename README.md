@@ -50,7 +50,19 @@ The project is built using the following technologies:
 - **Node.js and npm:** You can download it [here](https://nodejs.org/en)
 
 - **Git:** You can download it [here](https://git-scm.com/)
+---
 
+## **Environment Setup**
+- **Running locally:**
+
+  Ensure that your configurations in settings.py:
+  
+  'HOST': 'localhost'
+
+- **Running with docker:**
+  Ensure that your configurations in settings.py:
+  
+  'HOST': 'database'
 
 ## **Clone the Repository**
 ```bash
