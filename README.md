@@ -74,14 +74,24 @@ npm run dev
 ---
 
 ## **How to Use**
-Patient
-Registration: Sign up using the provided registration form.
-Login: Use your credentials to log in.
-Dashboard: View all available medicines and make refill requests.
-Refill Requests: Submit refill requests for your medications.
-Pharmacist
-Registration: Sign up using the provided registration form.
-Login: Use your credentials to log in.
-Dashboard: Access a list of all medicines and refill requests.
-Add Medicines: Add new medicines to the system.
-Refill Statistics: View refill requests per medicine using a bar chart.
+**Patient**
+
+- **Registration:** Sign up using the provided registration form.
+
+- **Login:** Use your credentials to log in.
+
+- **Dashboard:** View all available medicines and make refill requests.
+
+- **Refill Requests:** Submit refill requests for your medications.
+
+**Pharmacist**
+
+- **Registration:** Sign up using the provided registration form.
+
+- **Login:** Use your credentials to log in.
+
+- **Dashboard:** Access a list of all medicines and refill requests.
+
+- **Add Medicines:** Add new medicines to the system.
+
+- **Refill Statistics:** View refill requests per medicine using a bar chart.
