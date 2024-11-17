@@ -9,15 +9,23 @@ class MedicineSerializer(serializers.ModelSerializer):
                   'dosage', 'available_quantity','created_at')
 
 class UserSerializer(serializers.ModelSerializer):
+    role = serializers.SerializerMethodField()
     class Meta:
         model = User
-        fields = ('id', 'username', 'first_name','last_name','email', 'is_admin', 'is_staff','is_patient',
-                  'password')
+        fields = ('id', 'username', 'first_name','last_name','email', 'is_staff','is_patient',
+                  'password', 'role')
+    
+    def get_role(self, obj):
+        if obj.is_staff:
+            return 'staff'
+        elif obj.is_patient:
+            return 'patient'
 
+    
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
         return user
-
+               
 
 class RefillSerializer(serializers.ModelSerializer):
     medicine = serializers.PrimaryKeyRelatedField(queryset=Medicine.objects.all())  

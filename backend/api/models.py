@@ -14,9 +14,14 @@ class Medicine (models.Model):
         return f"{self.name}"
     
 class User(AbstractUser):
-	is_admin = models.BooleanField(default=False)
-	is_patient = models.BooleanField(default=False)
-     
+    is_patient = models.BooleanField(default=False)
+
+    def get_role_model(self):
+        if(self.is_staff):
+            return 'staff'
+        elif (self.is_patient):
+            return 'patient'
+        
 class RefillRequest (models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE)
     medicine = models.ForeignKey(Medicine, on_delete = models.CASCADE)

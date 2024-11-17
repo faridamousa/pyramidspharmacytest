@@ -1,4 +1,5 @@
 from django.shortcuts import render 
+from rest_framework.response import Response
 from rest_framework import generics
 from .serializers import MedicineSerializer, RefillCountSerializer, RefillSerializer, UserSerializer
 from .models import Medicine, RefillRequest, User
@@ -23,25 +24,21 @@ class AddRefillView(generics.CreateAPIView):
     permission_classes = [IsAuthenticated]
     
 
-
 class ListRefillView(generics.ListAPIView):
     queryset = RefillRequest.objects.values("medicine__name").annotate(refill_count=Count('id'))
     serializer_class = RefillCountSerializer
     permission_classes = [IsAuthenticated]
-    
-    
-#class AddUserView(generics.CreateAPIView):
-#    queryset = User.objects.all()
-#    serializer_class = UserSerializer
-#    permission_classes = [IsAuthenticated]
-
-#class ListUserView(generics.ListAPIView):
-#    queryset = User.objects.all()
-#    serializer_class = UserSerializer
-#   permission_classes = [IsAuthenticated]
 
     
 class CreateUserView(generics.ListCreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [AllowAny]
+
+class GetCurrentUser(generics.ListAPIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+        serializer = UserSerializer(user)
+        return Response(data=serializer.data)
