@@ -6,7 +6,7 @@ import StaffDashboard from "./pages/staff";
 import ProtectedRoute from "./components/protectedRoute";
 import RefillRequestsPage from "./pages/refill";
 import PatientDashboard from "./pages/patient";
-import StaffMedicinePage from "./pages/staffMedicinePage";
+import StaffMedicinePage from "./pages/staffMedicinePagee";
 import PatientMedicinePage from "./pages/patientMedicinePage";
 
 function Logout() {
