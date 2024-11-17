@@ -39,7 +39,7 @@ The project is built using the following technologies:
 - **Python:** You can download it [here](https://www.python.org/downloads/)
 
 - **Django:**
-  Install it by writting in terminal:
+  Install using:
   
   ```bash
   py -m pip install Django==5.1.3
