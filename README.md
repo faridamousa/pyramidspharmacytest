@@ -55,19 +55,20 @@ git clone https://github.com/faridamousa/pyramidspharmacytest
 ```
 
 **To run backend**
+```bash
+cd backend
 
-`cd backend`
-
-`python manage.py runserver`
-
+python manage.py runserver
+```
 
 **To run frontend**
+``` bash
+cd frontend
 
-`cd frontend`
+npm install
 
-`npm install`
-
-`npm run dev`
+npm run dev
+```
 
 
 ---
