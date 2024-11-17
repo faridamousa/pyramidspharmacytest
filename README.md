@@ -12,9 +12,13 @@ This web application facilitates:
 The project is built using the following technologies:
 
 -**Backend**: Django and Django Rest Framework for a robust server-side architecture.
+
 -**Frontend**: React for a dynamic and responsive user interface.
+
 -**HTTP Communication**: Axios library for seamless communication between frontend and backend.
+
 -**Routing**: React Router for a smooth single-page application experience.
+
 
 ---
 ## **Features**
