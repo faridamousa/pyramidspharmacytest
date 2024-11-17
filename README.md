@@ -36,14 +36,17 @@ The project is built using the following technologies:
 ---
 ## **Installation**
 **Prerequisites**
-- **Python**
+- **Python:** You can download it [here](https://www.python.org/downloads/)
 
-- **Django**
+- **Django:**
+  Install it by writting in terminal:
+  `py -m pip install Django==5.1.3`
 
-- **PostgreSQL**
+- **PostgreSQL:** You can download it [here](https://www.postgresql.org/download/)
 
-- **Node.js and npm (for frontend)**
+- **Node.js and npm:** You can download it [here](https://nodejs.org/en)
 
+- **Git:** You can download it [here](https://git-scm.com/)
 
 Steps to Run the Project
 Clone the Repository
