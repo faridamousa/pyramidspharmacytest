@@ -51,7 +51,7 @@ The project is built using the following technologies:
 
 ## **Clone the Repository**
 
-`git clone [<repository-url>](https://github.com/faridamousa/pyramidspharmacytest)`
+`git clone https://github.com/faridamousa/pyramidspharmacytest`
 
 cd pyramidspharmacytest
 Backend Setup
