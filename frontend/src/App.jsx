@@ -2,10 +2,12 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/login";
 import Register from "./pages/register";
-import Home from "./pages/home";
+import StaffDashboard from "./pages/staff";
 import ProtectedRoute from "./components/protectedRoute";
-import RefillRequests from "./pages/refill";
-import MedicinePage from "./pages/medicine";
+import RefillRequestsPage from "./pages/refill";
+import PatientDashboard from "./pages/patient";
+import StaffMedicinePage from "./pages/staffMedicinePage";
+import PatientMedicinePage from "./pages/patientMedicinePage";
 
 function Logout() {
   localStorage.clear();
@@ -22,18 +24,31 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path="/staff/dashboard"
           element={
-            <ProtectedRoute>
-              <Home />
+            <ProtectedRoute role="is_staff">
+              <StaffDashboard />
             </ProtectedRoute>
           }
         />
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/patient/dashboard"
+          element={
+            <ProtectedRoute role="is_patient">
+              <PatientDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/" element={<Login />} />
         <Route path="/register" element={<RegisterAndLogout />} />
         <Route path="/logout" element={<Logout />} />
-        <Route path="/medicine" element={<MedicinePage />} />
-        <Route path="/refill" element={<RefillRequests />} />
+
+        <Route path="/staff" element={<StaffDashboard />} />
+        <Route path="/staff/medicine" element={<StaffMedicinePage />} />
+        <Route path="/staff/refill" element={<RefillRequestsPage />} />
+
+        <Route path="/patient" element={<PatientDashboard />} />
+        <Route path="/patient/medicine" element={<PatientMedicinePage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,11 +1,31 @@
 import React, { useEffect, useState } from "react";
-import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import api from "../api";
 import "../styles/refill.css";
+import { useNavigate } from "react-router-dom";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
-function RefillRequests() {
+// Register the necessary components
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+function RefillRequestsPage() {
   const [chartData, setChartData] = useState(null);
+  const navigate = useNavigate();
   useEffect(() => {
     api.get("/api/listRefill/").then((res) => {
       const data = res.data;
@@ -51,8 +71,12 @@ function RefillRequests() {
           },
         }}
       />
+      <div className="button-container">
+        <button onClick={() => navigate("/")}>Logout</button>
+        <button onClick={() => navigate("/staff")}>Go to dashboard</button>
+      </div>
     </div>
   );
 }
 
-export default RefillRequests;
+export default RefillRequestsPage;

@@ -9,29 +9,29 @@ function Form({ route, method }) {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const name = method === "login" ? "Login" : "Register";
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const res = await api.post(route, { username, password });
-      if (method === "login") {
-        localStorage.setItem(ACCESS_TOKEN, res.data.access);
-        localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
-        navigate("/");
-      } else {
-        navigate("/login");
+      localStorage.setItem(ACCESS_TOKEN, res.data.access);
+      localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
+
+      const user = await api.get("/api/getUser");
+      const userRole = user.data.role;
+
+      if (userRole === "staff") {
+        navigate("/staff/dashboard");
+      } else if (userRole === "patient") {
+        navigate("/patient/dashboard");
       }
     } catch (error) {
       alert(error);
-    } finally {
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
-      <h1>{name}</h1>
+      <h1>Login</h1>
       <input
         className="form-input"
         type="text"
@@ -47,7 +47,7 @@ function Form({ route, method }) {
         placeholder="Password"
       />
       <button className="form-button" type="submit">
-        {name}
+        Login
       </button>
     </form>
   );

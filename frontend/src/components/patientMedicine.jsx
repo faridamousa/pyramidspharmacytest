@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import api from "../api";
 import "../styles/medicine.css";
 
-function Medicine({ medicine, getMedicine }) {
+function PatientMedicine({ medicine, getMedicine }) {
   const [showRefillForm, setShowRefillForm] = useState(false);
   const [refillQuantity, setRefillQuantity] = useState("");
 
-  const requestRefill = (e) => {
+  const requestRefill = async (e) => {
     e.preventDefault();
+    const user = await api.get("/api/getUser");
     console.log({ medicine: medicine.id, quantity: refillQuantity });
     api
       .post("/api/addRefill/", {
+        user: user.data.id,
         medicine: medicine.id,
         quantity: refillQuantity,
       })
@@ -58,4 +60,4 @@ function Medicine({ medicine, getMedicine }) {
   );
 }
 
-export default Medicine;
+export default PatientMedicine;

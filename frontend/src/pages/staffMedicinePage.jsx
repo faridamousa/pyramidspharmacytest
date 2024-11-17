@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 import api from "../api";
-import Medicine from "../components/medicine";
+import StaffMedicine from "../components/staffMedicine";
 import "../styles/medicinePage.css";
+import { useNavigate } from "react-router-dom";
 
-function MedicinePage() {
+function StaffMedicinePage() {
   const [medicines, setMedicines] = useState([]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [dosage, setDosage] = useState("");
   const [available_quantity, setAvailable_quantity] = useState("");
   const [showAddForm, setShowAddForm] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getMedicine();
@@ -93,15 +95,21 @@ function MedicinePage() {
 
       <div className="medicine-list">
         {medicines.map((medicine) => (
-          <Medicine
+          <StaffMedicine
             key={medicine.id}
             medicine={medicine}
             getMedicine={getMedicine}
           />
         ))}
       </div>
+      <div className="button">
+        <button onClick={() => navigate("/")}>Logout</button>
+      </div>
+      <div className="button">
+        <button onClick={() => navigate("/staff")}>Go to dashboard</button>
+      </div>
     </div>
   );
 }
 
-export default MedicinePage;
+export default StaffMedicinePage;
