@@ -11,26 +11,26 @@ This web application facilitates:
 ## **Technologies and Frameworks Used**
 The project is built using the following technologies:
 
-- **Backend**: Django and Django Rest Framework for a robust server-side architecture.
+- **Backend:** Django and Django Rest Framework for a robust server-side architecture.
 
-- **Frontend**: React for a dynamic and responsive user interface.
+- **Frontend:** React for a dynamic and responsive user interface.
 
-- **HTTP Communication**: Axios library for seamless communication between frontend and backend.
+- **HTTP Communication:** Axios library for seamless communication between frontend and backend.
 
-- **Routing**: React Router for a smooth single-page application experience.
+- **Routing:** React Router for a smooth single-page application experience.
 
 
 ---
 ## **Features**
-- **User Registration and Login**: Secure authentication for both patients and pharmacists.
+- **User Registration and Login:** Secure authentication for both patients and pharmacists.
 
-- **Add New Medicines**: Pharmacists can add medicines to the system.
+- **Add New Medicines:** Pharmacists can add medicines to the system.
 
-- **View Medicines**: Patients and pharmacists can browse available medicines.
+- **View Medicines:** Patients and pharmacists can browse available medicines.
 
-- **Refill Requests**: Patients can request refills for medicines.
+- **Refill Requests:** Patients can request refills for medicines.
 
-- **Refill Statistics**: Pharmacists can visualize refill request counts using a bar chart.
+- **Refill Statistics:** Pharmacists can visualize refill request counts using a bar chart.
 
 
 ---
@@ -54,14 +54,20 @@ The project is built using the following technologies:
 `git clone https://github.com/faridamousa/pyramidspharmacytest`
 
 **To run backend**
+
 `cd backend`
+
 `python manage.py runserver`
 
 
 **To run frontend**
+
 `cd frontend`
+
 `npm install`
+
 `npm run dev`
+
 
 ---
 
