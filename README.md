@@ -50,8 +50,9 @@ The project is built using the following technologies:
 
 
 ## **Clone the Repository**
-
-`git clone https://github.com/faridamousa/pyramidspharmacytest`
+```bash
+git clone https://github.com/faridamousa/pyramidspharmacytest
+```
 
 **To run backend**
 
