@@ -73,7 +73,7 @@ npm run dev
 
 ---
 
-How to Use
+## **How to Use**
 Patient
 Registration: Sign up using the provided registration form.
 Login: Use your credentials to log in.
