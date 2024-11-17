@@ -1,73 +1,70 @@
 Pyramids Pharmacy Test
+Pyramids Pharmacy Test is a web application that allows patients to view medicines and make refill requests while enabling pharmacists to add new medicines and analyze refill requests through a bar chart visualization.
 
 Summary
-Pyramids Pharmacy Test is a web application that allows patients to view medicines and make a refill request and also allows pharmacists to add new medicines and view the number of refill requests made per medicine.
+This web application facilitates:
 
-Tech/Framework used
-The project is built using the following technologies and frameworks:
-Django: The backend of the application is developed using Django and Django rest framework
-React: The frontend of the application is developed using the React library, providing a dynamic and responsive user interface.
-Axios: The Axios library is employed for making HTTP requests, ensuring seamless communication between the frontend and backend.
-React Router: Navigation within the React-based application is managed using React Router, providing a single-page application experience.
+Patients: Viewing medicines, making refill requests.
+Pharmacists: Adding new medicines and analyzing refill requests.
+Technologies and Frameworks Used
+The project is built using the following technologies:
 
+Backend: Django and Django Rest Framework for a robust server-side architecture.
+Frontend: React for a dynamic and responsive user interface.
+HTTP Communication: Axios library for seamless communication between frontend and backend.
+Routing: React Router for a smooth single-page application experience.
 Features
-1) User registreation and login
-2) Adding new medicine
-3) Viewing all medicines
-4) Making a refill request for a medicine
-5) Viweing the number of refill requests made per medicine using a bar chart
+User Registration and Login: Secure authentication for both patients and pharmacists.
+Add New Medicines: Pharmacists can add medicines to the system.
+View Medicines: Patients and pharmacists can browse available medicines.
+Refill Requests: Patients can request refills for medicines.
+Refill Statistics: Pharmacists can visualize refill request counts using a bar chart.
+Installation
+Prerequisites
+Python
+Django
+PostgreSQL
+Node.js and npm (for frontend)
+Steps to Run the Project
+Clone the Repository
 
-Installation:
-prerequisites
-1) Python. 
-2) Django
-3) PostgreSQL
-
-Clone the repo
-
-To run backend
+bash
+Copy code
+git clone <repository-url>
 cd pyramidspharmacytest
+Backend Setup
+
+Navigate to the backend folder:
+bash
+Copy code
 cd backend
+Run the server:
+bash
+Copy code
 python manage.py runserver
+Frontend Setup
 
-To run frontend
-cd pyramidspharmacytest
-cd backend
+Navigate to the frontend folder:
+bash
+Copy code
+cd ../frontend
+Install dependencies:
+bash
+Copy code
+npm install
+Start the development server:
+bash
+Copy code
 npm run dev
-
 How to Use
 Patient
-
-Registration:
-Start by registering as a patient using the provided registration form.
-Fill in your details and submit the form to create an account.
-
-Login:
-Once registered, log in using your credentials.
-
-Dashboard:
-Explore dashboard where you can see all medicines and make a refill request
-
-Refill Requests:
-Add a new refill request based on the wanted medication
-
+Registration: Sign up using the provided registration form.
+Login: Use your credentials to log in.
+Dashboard: View all available medicines and make refill requests.
+Refill Requests: Submit refill requests for your medications.
 Pharmacist
-
-Registration:
-Start by registering as a patient using the provided registration form.
-Fill in your details and submit the form to create an account.
-
-Login:
-Once registered, log in using your credentials.
-
-Dashboard:
-Explore dashboard where you can see all medicines and view all the refill requests made 
-
-View Medicines:
-Add new medicine and view all existing ones
-
-Refill Requests:
-View refill requests made per medicine in a bar char
-
-
-
+Registration: Sign up using the provided registration form.
+Login: Use your credentials to log in.
+Dashboard: Access a list of all medicines and refill requests.
+Add Medicines: Add new medicines to the system.
+Refill Statistics: View refill requests per medicine using a bar chart.
