@@ -1,4 +1,4 @@
-Pyramids Pharmacy Test
+# **Pyramids Pharmacy Test**
 Pyramids Pharmacy Test is a web application that allows patients to view medicines and make refill requests while enabling pharmacists to add new medicines and analyze refill requests through a bar chart visualization.
 
 Summary
