@@ -70,7 +70,10 @@ npm install
 npm run dev
 ```
 
-
+**To run docker**
+```bash
+docker compose up --build
+```
 ---
 
 ## **How to Use**
