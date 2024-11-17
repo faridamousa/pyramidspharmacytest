@@ -53,31 +53,18 @@ The project is built using the following technologies:
 
 `git clone https://github.com/faridamousa/pyramidspharmacytest`
 
-cd pyramidspharmacytest
-Backend Setup
+**To run backend**
+`cd backend`
+`python manage.py runserver`
 
-Navigate to the backend folder:
-bash
-Copy code
-cd backend
-Run the server:
-bash
-Copy code
-python manage.py runserver
-Frontend Setup
 
-Navigate to the frontend folder:
-bash
-Copy code
-cd ../frontend
-Install dependencies:
-bash
-Copy code
-npm install
-Start the development server:
-bash
-Copy code
-npm run dev
+**To run frontend**
+`cd frontend`
+`npm install`
+`npm run dev`
+
+---
+
 How to Use
 Patient
 Registration: Sign up using the provided registration form.
