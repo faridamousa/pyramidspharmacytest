@@ -48,8 +48,8 @@ The project is built using the following technologies:
 
 - **Git:** You can download it [here](https://git-scm.com/)
 
-Steps to Run the Project
-Clone the Repository
+
+## **Clone the Repository**
 
 bash
 Copy code
