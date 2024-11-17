@@ -54,7 +54,6 @@ The project is built using the following technologies:
 
 ## **Environment Setup**
 - **Running locally:**
-
   Ensure that your configurations in settings.py:
   
   'HOST': 'localhost'
