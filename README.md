@@ -15,7 +15,7 @@ The project is built using the following technologies:
 
 - **Frontend:** React for a dynamic and responsive user interface.
 
-- **HTTP Communication:** Axios library for seamless communication between frontend and backend.
+- **Axios:** Axios library for seamless communication between frontend and backend.
 
 - **Routing:** React Router for a smooth single-page application experience.
 
@@ -40,7 +40,10 @@ The project is built using the following technologies:
 
 - **Django:**
   Install it by writting in terminal:
-  `py -m pip install Django==5.1.3`
+  
+  ```bash
+  py -m pip install Django==5.1.3
+  ```
 
 - **PostgreSQL:** You can download it [here](https://www.postgresql.org/download/)
 
